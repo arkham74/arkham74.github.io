@@ -61,57 +61,71 @@
 
 	<!-- Header -->
 	<header class="w3-container w3-blue w3-center" style="padding:83px 0px 32px 0px">
-		<!-- <h1 class="w3-margin w3-jumbo">JasonGames</h1> -->
-		<img src="images/cb_logo_small.png" alt="Jason Games Logo">
+		<a href="https://store.steampowered.com/app/1996100/Cordbot/"><img src="images/cb_logo_small.png"
+				alt="Jason Games Logo"></a>
 	</header>
 
 	<!-- First Grid -->
 	<div class="w3-row-padding w3-padding-64 w3-container">
 		<div class="w3-content">
+			<div class="w3-center">
+				<iframe src="https://store.steampowered.com/widget/1996100/" frameborder="0" width="646" height="190"></iframe>
+			</div>
 			<div class="w3-twothird">
-				<h1>Hello</h1>
-				<h5 class="w3-padding-32">My name is Jason and I make Games</h5>
-
-				<!-- <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-					laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
-					adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco
-					laboris nisi ut aliquip ex ea commodo consequat.</p> -->
+				<h3>About</h3>
+				<h5 class="w3-padding-32">Short game about solving wire puzzles with an adorable robot protagonist.</h5>
+				<h3>Puzzles</h3>
+				<h5 class="w3-padding-32">Solve various puzzles involving cords, electrical wires, lasers and more.</h5>
+				<h3>Gameplay</h3>
+				<h5 class="w3-padding-32">Pick up plugs and place them in sockets to open doors and turn on devices.</h5>
+				<h3>Stages</h3>
+				<h5 class="w3-padding-32">30 handcrafted stages with increasing levels of difficulty</h5>
 			</div>
 
-			<!-- <div class="w3-third w3-center">
-				<i class="fa fa-anchor w3-padding-64 w3-text-blue"></i>
-			</div> -->
+			<div class="w3-third w3-center">
+				<!-- <i class="fa fa-anchor w3-padding-64 w3-text-blue"></i> -->
+			</div>
 		</div>
 	</div>
 
 	<!-- Second Grid -->
-	<!-- <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+	<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
 		<div class="w3-content">
-			<div class="w3-third w3-center">
-				<i class="fa fa-coffee w3-padding-64 w3-text-blue w3-margin-right"></i>
-			</div>
+			<div class="w3-center">
 
-			<div class="w3-twothird">
-				<h1>Lorem Ipsum</h1>
-				<h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-					laboris nisi ut aliquip ex ea commodo consequat.</h5>
 
-				<p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-					laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
-					adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco
-					laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<div class="w3-content" style="max-width:1200px">
+					<img class="mySlides" src="images/sc1.png" style="width:100%">
+					<img class="mySlides" src="images/sc2.png" style="width:100%;display:none">
+					<img class="mySlides" src="images/sc3.png" style="width:100%;display:none">
+					<img class="mySlides" src="images/sc4.png" style="width:100%;display:none">
+
+					<div class="w3-row-padding w3-section">
+						<div class="w3-col s3 w3-center">
+							<img class="demo w3-opacity w3-hover-opacity-off" src="images/sc1.png" style="width:100%;cursor:pointer"
+								onclick="currentDiv(1)">
+						</div>
+						<div class="w3-col s3 w3-center">
+							<img class="demo w3-opacity w3-hover-opacity-off" src="images/sc2.png" style="width:100%;cursor:pointer"
+								onclick="currentDiv(2)">
+						</div>
+						<div class="w3-col s3 w3-center">
+							<img class="demo w3-opacity w3-hover-opacity-off" src="images/sc3.png" style="width:100%;cursor:pointer"
+								onclick="currentDiv(3)">
+						</div>
+						<div class="w3-col s3 w3-center">
+							<img class="demo w3-opacity w3-hover-opacity-off" src="images/sc4.png" style="width:100%;cursor:pointer"
+								onclick="currentDiv(4)">
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</div>
 	</div>
+	</div>
 
-	<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+	<!-- <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
 		<h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
 	</div> -->
 
@@ -129,6 +143,39 @@
 	</footer>
 
 	<script>
+
+		var slideIndex = -1;
+		carousel();
+
+		function currentDiv(n) {
+			showDivs(slideIndex = n);
+		}
+
+		function plusDivs(n) {
+			showDivs(slideIndex += n);
+		}
+
+		function carousel() {
+			currentDiv(slideIndex + 1)
+			setTimeout(carousel, 5000); // Change image every 2 seconds
+		}
+
+		function showDivs(n) {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("demo");
+			if (n > x.length) { slideIndex = 1 }
+			if (n < 1) { slideIndex = x.length }
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+			}
+			x[slideIndex - 1].style.display = "block";
+			dots[slideIndex - 1].className += " w3-opacity-off";
+		}
+
 		// Used to toggle the menu on small screens when clicking on the menu button
 		function myFunction() {
 			var x = document.getElementById("navDemo");
