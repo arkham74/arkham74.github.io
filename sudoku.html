@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>JasonGames - Sudoku</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		body,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-family: "Lato", sans-serif
+		}
+
+		.w3-bar,
+		h1,
+		button {
+			font-family: "Montserrat", sans-serif
+		}
+
+		.fa-anchor,
+		.fa-coffee {
+			font-size: 200px
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- Navbar -->
+	<div class="w3-top">
+		<div class="w3-bar w3-teal w3-card w3-left-align w3-large">
+			<a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-teal"
+				href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+			<a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
+			<a href="cordbot.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">CordBot</a>
+			<a href="beatspace.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Beat
+				Space</a>
+			<a href="sudoku.html" class="w3-bar-item w3-button w3-padding-large w3-white">Sudoku</a>
+			<a href="starbattles.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Star
+				Battles</a>
+		</div>
+
+		<!-- Navbar on small screens -->
+		<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+			<a href="index.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
+			<a href="cordbot.html" class="w3-bar-item w3-button w3-padding-large">CordBot</a>
+			<a href="beatspace.html" class="w3-bar-item w3-button w3-padding-large">Beat Space</a>
+			<a href="sudoku.html" class="w3-bar-item w3-button w3-padding-large">Sudoku</a>
+			<a href="starbattles.html" class="w3-bar-item w3-button w3-padding-large">Star Battles</a>
+		</div>
+	</div>
+
+	<!-- Header -->
+	<header class="w3-container w3-teal w3-center" style="padding:83px 0px 32px 0px">
+		<a href="https://store.steampowered.com/app/1996100/Cordbot/"><img src="images/cb_logo_small.png"
+				alt="Jason Games Logo"></a>
+	</header>
+
+	<!-- First Grid -->
+	<div class="w3-row-padding w3-padding-64 w3-container">
+		<div class="w3-content">
+			<div class="w3-center">
+				<iframe src="https://store.steampowered.com/widget/1996100/" frameborder="0" width="646" height="190"></iframe>
+			</div>
+			<div class="w3-twothird">
+				<h3>About</h3>
+				<h5 class="w3-padding-32">Short game about solving wire puzzles with an adorable robot protagonist.</h5>
+				<h3>Puzzles</h3>
+				<h5 class="w3-padding-32">Solve various puzzles involving cords, electrical wires, lasers and more.</h5>
+				<h3>Gameplay</h3>
+				<h5 class="w3-padding-32">Pick up plugs and place them in sockets to open doors and turn on devices.</h5>
+				<h3>Stages</h3>
+				<h5 class="w3-padding-32">30 handcrafted stages with increasing levels of difficulty</h5>
+			</div>
+
+			<div class="w3-third w3-center">
+				<!-- <i class="fa fa-anchor w3-padding-64 w3-text-teal"></i> -->
+			</div>
+		</div>
+	</div>
+
+	<!-- Second Grid -->
+	<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+		<div class="w3-content">
+			<div class="w3-center">
+
+
+				<div class="w3-content" style="max-width:1200px">
+					<img class="mySlides" src="images/sc1.png" style="width:100%">
+					<img class="mySlides" src="images/sc2.png" style="width:100%;display:none">
+					<img class="mySlides" src="images/sc3.png" style="width:100%;display:none">
+					<img class="mySlides" src="images/sc4.png" style="width:100%;display:none">
+
+					<div class="w3-row-padding w3-section">
+						<div class="w3-col s3 w3-center">
+							<img class="demo w3-opacity w3-hover-opacity-off" src="images/sc1.png" style="width:100%;cursor:pointer"
+								onclick="currentDiv(1)">
+						</div>
+						<div class="w3-col s3 w3-center">
+							<img class="demo w3-opacity w3-hover-opacity-off" src="images/sc2.png" style="width:100%;cursor:pointer"
+								onclick="currentDiv(2)">
+						</div>
+						<div class="w3-col s3 w3-center">
+							<img class="demo w3-opacity w3-hover-opacity-off" src="images/sc3.png" style="width:100%;cursor:pointer"
+								onclick="currentDiv(3)">
+						</div>
+						<div class="w3-col s3 w3-center">
+							<img class="demo w3-opacity w3-hover-opacity-off" src="images/sc4.png" style="width:100%;cursor:pointer"
+								onclick="currentDiv(4)">
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<!-- <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+		<h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+	</div> -->
+
+	<!-- Footer -->
+	<footer class="w3-container w3-padding-64 w3-center w3-opacity">
+		<div class="w3-xlarge w3-padding-32">
+			<!--     <i class="fa fa-facebook-official w3-hover-opacity"></i> -->
+			<!--     <i class="fa fa-instagram w3-hover-opacity"></i> -->
+			<!--     <i class="fa fa-snapchat w3-hover-opacity"></i> -->
+			<!--     <i class="fa fa-pinterest-p w3-hover-opacity"></i> -->
+			<a href="https://twitter.com/Arkham74"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+			<!--     <i class="fa fa-linkedin w3-hover-opacity"></i> -->
+		</div>
+		<p><a href="policy.html">Privacy policy</a></p>
+	</footer>
+
+	<script>
+
+		var slideIndex = -1;
+		carousel();
+
+		function currentDiv(n) {
+			showDivs(slideIndex = n);
+		}
+
+		function plusDivs(n) {
+			showDivs(slideIndex += n);
+		}
+
+		function carousel() {
+			currentDiv(slideIndex + 1)
+			setTimeout(carousel, 5000); // Change image every 2 seconds
+		}
+
+		function showDivs(n) {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("demo");
+			if (n > x.length) { slideIndex = 1 }
+			if (n < 1) { slideIndex = x.length }
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+			}
+			x[slideIndex - 1].style.display = "block";
+			dots[slideIndex - 1].className += " w3-opacity-off";
+		}
+
+		// Used to toggle the menu on small screens when clicking on the menu button
+		function myFunction() {
+			var x = document.getElementById("navDemo");
+			if (x.className.indexOf("w3-show") == -1) {
+				x.className += " w3-show";
+			} else {
+				x.className = x.className.replace(" w3-show", "");
+			}
+		}
+	</script>
+
+</body>
+
+</html>
